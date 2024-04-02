@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css" integrity="sha512-i1b/nzkVo97VN5WbEtaPebBG8REvjWeqNclJ6AItj7msdVcaveKrlIIByDpvjk5nwHjXkIqGZscVxOrTb9tsMA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>traditional wear</title>
+        <style>
+            .box{
+                margin-left: 30px;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header style="background-color: #EED6D3; height: 80px;">
+            <div style="display: inline-flex;">
+              <div style="margin-right: 200px; margin-top: 4px;"><a href="shooping.html"><img src="images/logo.png" height="100px" width="100px"></a></div>
+              <div style="margin-top: 10px;">
+              <button style="width: 200px; font-size: 20px; text-align:start; margin-left: 800px; height: 50px;" class="btn btn-outline-info"><i class="fa-sharp fa-solid fa-magnifying-glass" style="margin-right: 10px;"></i>search</button>
+              <i class="fa-sharp fa-solid fa-camera" style="margin-left: 50px; margin-top: 5px; font-size: 30px;"></i></div>
+            </div>
+          </header>
+        <form action="" style="margin-top: 50px; margin-left: 400px;">
+            <input type="number" id="minvalue" style="width:200px;border-radius: 20px;"/>
+            <input type="number" id="maxvalue" style="width:200px;border-radius: 20px;"/>
+            <input type="button" class="submit btn btn-info" value="filter" />
+        </form>
+        <div class="mainbox" style="margin-top: 50px; flex-wrap:wrap;" >
+            <div style="display: inline-flex; margin-left: 150px;">
+            <div class="box" data-value="400" style="border: 1px solid black; border-radius: 30px;" >
+                <img src="images/kid1.jpg" height="300px" width="300px">
+                <h3 style="text-align: center;">Allen Solly</h3>
+            <p class="box" data-value="400" style="text-align: center;"> Price:400</p></div>
+            <div class="box" data-value="500" style="border: 1px solid black; border-radius: 30px;">
+                <img src="images/kid2.jpg" height="300px" width="300px">
+                <h3 style="text-align: center;">Peter England</h3>
+                <p class="box" data-value="500" style="text-align: center;">Price:500</p></div>
+            <div class="box" data-value="600" style="border: 1px solid black; border-radius: 30px;">
+                <img src="images/kid3.jpg" height="300px" width="300px">
+                <h3 style="text-align: center;">US Polo</h3>
+                <p class="box" data-value="600" style="text-align: center;"> Price:600</p></div></div>
+            <div style="display: inline-flex; margin-top: 50px; margin-left: 150px;">
+                <div class="box" data-value="700" style="border: 1px solid black;border-radius: 30px;">
+                    <img src="images/kid4.jpg" height="300px" width="300px">
+                    <h3 style="text-align: center;">Arrow</h3>
+                    <p class="box" data-value="700" style="text-align: center;"> Price:700</p></div>
+            <div class="box" data-value="800" style="border: 1px solid black;border-radius: 30px;">
+                <img src="images/kid5.jpg" height="300px" width="300px">
+                <h3 style="text-align: center;">Levis</h3>
+                <p class="box" data-value="800" style="text-align: center;"> Price:800</p></div>
+            <div class="box" data-value="900" style="border: 1px solid black;border-radius: 30px;">
+                <img src="images/kid6.jpg" height="300px" width="300px">
+                <h3 style="text-align: center;">Adidas</h3>
+                <p class="box" data-value="900" style="text-align: center;"> Price:900</p></div>
+            </div> 
+        </div>
+        <script>
+            subBtn=document.querySelector('.submit' );
+            let datavalue=document.querySelectorAll('.box');
+            datavalue.forEach(function(item){
+                subBtn.addEventListener("click",function(){
+                    let min=document.getElementById("minvalue").value;
+                    let max=document.getElementById("maxvalue").value;
+                    minPI=parseInt(min);
+                    maxPI=parseInt(max);
+                    let dataitems=item.getAttribute("data-value");
+                    if(dataitems>=minPI && dataitems<=maxPI){
+                        item.style.display="block";
+                    }
+                    else{
+                       item.style.display="none";
+                    }
+                })
+            })
+    
+           
+        </script>
+    </body>
+</html>

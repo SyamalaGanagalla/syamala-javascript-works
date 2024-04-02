@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css" integrity="sha512-i1b/nzkVo97VN5WbEtaPebBG8REvjWeqNclJ6AItj7msdVcaveKrlIIByDpvjk5nwHjXkIqGZscVxOrTb9tsMA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Account</title>
+    </head>
+    <body>
+      <h1 style="margin-top: 50px;text-align: center;">Punjab Bank</h1>
+       <div class="row" style="margin-top: 200px;">
+        <div class="col-4">
+          <div class="one" style="border:1px solid black; width:250px; margin-left: 150px; border-radius: 10px; padding: 20px;">
+         <h3 style="text-align: center;">Account Details</h3>
+         <center><button style="width: 200px; height:30px; border-radius: 10px;" class="btn btn-outline-info" onclick="sub()">submit</button></center>
+        </div>
+      </div>
+        <div class="col-4">
+          <div class="two" style="border: 1px solid black; width:250px; margin-left: 80px; border-radius: 10px; padding: 20px;">
+            <h3 style="text-align: center;">Debit Amount</h3>
+            <center><button style="width: 200px; height: 30px; border-radius: 10px;" class="btn btn-outline-success" onclick="deb()"><center>submit</center></button</center>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="three" style="border:1px solid black; width:250px; border-radius: 10px; padding: 20px;">
+         <h3 style="text-align: center;">Credit Amount</h3>
+         <center><a href="credit.html"><button style="width:200px; height:30px;border-radius: 10px;" class="btn btn-outline-primary">submit</button></a></center>
+          </div>
+        </div>
+       </div>
+       <script>
+        function sub(){
+          const x=6666;
+          let pin=+prompt("enter your pin");
+          if(pin===6666){
+           location.href="user details.html";
+          }
+          else if(pin==""){
+            alert("blank username");
+          }
+          else{
+            alert("enter valid pin")
+          }
+        }
+        function deb(){
+          const x=6666;
+          let pin=+prompt("enter your pin");
+          if(pin===6666){
+           location.href="debit.html";
+          }
+          else{
+            alert("enter valid pin")
+          }
+        }
+       </script>
+    </body>
+</html>
